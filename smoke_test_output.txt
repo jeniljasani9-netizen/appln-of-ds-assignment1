@@ -1,0 +1,9 @@
+torch: 2.13.0+cu130
+transformers: 5.15.0
+bert_score: 0.3.12
+
+config: roberta-large_L17_no-idf_version=0.3.12(hug_trans=5.15.0)-rescaled
+reference: the weather is cold today
+P=1.0000 R=1.0000 F1=1.0000  <- the weather is cold today
+P=0.7871 R=0.6675 F1=0.7271  <- it is freezing today
+P=0.1856 R=0.2165 F1=0.2023  <- the stock market closed higher
