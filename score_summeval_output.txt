@@ -1,0 +1,44 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating test split:   0%|          | 0/100 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 100/100 [00:00<00:00, 602.07 examples/s]Generating test split: 100%|██████████| 100/100 [00:00<00:00, 590.85 examples/s]
+columns: ['machine_summaries', 'human_summaries', 'relevance', 'coherence', 'fluency', 'consistency', 'text', 'id']
+articles available: 100 
+
+scoring 480 machine summaries against 3 references each
+
+Loading weights:   0%|          | 0/389 [00:00<?, ?it/s]Loading weights:  49%|████▉     | 191/389 [00:00<00:00, 1692.74it/s]Loading weights: 100%|██████████| 389/389 [00:00<00:00, 2483.38it/s]
+[transformers] [1mRobertaModel LOAD REPORT[0m from: roberta-large
+Key                       | Status     | 
+--------------------------+------------+-
+lm_head.dense.weight      | UNEXPECTED | 
+lm_head.dense.bias        | UNEXPECTED | 
+lm_head.bias              | UNEXPECTED | 
+lm_head.layer_norm.bias   | UNEXPECTED | 
+lm_head.layer_norm.weight | UNEXPECTED | 
+pooler.dense.bias         | MISSING    | 
+pooler.dense.weight       | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+config: roberta-large_L17_no-idf_version=0.3.12(hug_trans=5.17.0)-rescaled 
+
+calculating scores...
+computing bert embedding.
+  0%|          | 0/9 [00:00<?, ?it/s] 11%|█         | 1/9 [01:19<10:38, 79.86s/it] 22%|██▏       | 2/9 [02:09<07:16, 62.31s/it] 33%|███▎      | 3/9 [02:55<05:28, 54.73s/it] 44%|████▍     | 4/9 [03:39<04:11, 50.39s/it] 56%|█████▌    | 5/9 [04:14<02:59, 44.93s/it] 67%|██████▋   | 6/9 [04:47<02:02, 40.69s/it] 78%|███████▊  | 7/9 [05:29<01:22, 41.11s/it] 89%|████████▉ | 8/9 [05:53<00:35, 35.75s/it]100%|██████████| 9/9 [06:05<00:00, 28.46s/it]100%|██████████| 9/9 [06:05<00:00, 40.63s/it]
+computing greedy matching.
+  0%|          | 0/23 [00:00<?, ?it/s]  9%|▊         | 2/23 [00:00<00:01, 14.35it/s] 17%|█▋        | 4/23 [00:00<00:01, 15.65it/s] 30%|███       | 7/23 [00:00<00:00, 18.67it/s] 39%|███▉      | 9/23 [00:00<00:00, 17.98it/s] 48%|████▊     | 11/23 [00:00<00:00, 16.98it/s] 57%|█████▋    | 13/23 [00:00<00:00, 17.28it/s] 70%|██████▉   | 16/23 [00:00<00:00, 20.43it/s] 83%|████████▎ | 19/23 [00:01<00:00, 19.65it/s] 91%|█████████▏| 21/23 [00:01<00:00, 19.00it/s]100%|██████████| 23/23 [00:01<00:00, 19.23it/s]
+/usr/local/python/3.14.2/lib/python3.14/site-packages/bert_score/scorer.py:139: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
+  self._baseline_vals = torch.from_numpy(
+done in 3752.06 seconds, 0.38 sentences/sec
+dimension      BERTScore r    BLEU r  BERTScore tau  BLEU tau
+-------------------------------------------------------------
+coherence           0.3467    0.1372         0.2210    0.0861
+consistency         0.1501    0.1006         0.1106    0.0619
+fluency             0.1639    0.0794         0.1060    0.0343
+relevance           0.3580    0.2049         0.2388    0.1645
+
+relevance minus consistency, BERTScore Pearson: +0.2079
+(positive supports the proposal's hypothesis)
+BERTScore beats BLEU on Kendall tau in 4 of 4 dimensions
+
+wrote results_summeval.csv
