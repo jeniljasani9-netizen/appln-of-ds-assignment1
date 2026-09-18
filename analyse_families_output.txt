@@ -1,0 +1,13 @@
+baseline (synonym swap, meaning preserved): 0.9328
+
+cost of each edit, relative to a meaning-preserving synonym swap:
+  number_swap  n= 24  BERTScore drop -0.0397
+  antonym      n=184  BERTScore drop +0.0098
+  negation     n=200  BERTScore drop +0.0524
+  scramble     n=200  BERTScore drop +0.6496
+
+excluding word scrambling (808 pairs), Spearman with severity:
+  BERTScore -0.7497
+  BLEU      -0.7576
+
+antonym scored at or ABOVE its synonym counterpart: 78/184 (42.4%)

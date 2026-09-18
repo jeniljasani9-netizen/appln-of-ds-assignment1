@@ -1,0 +1,201 @@
+category,sentence
+cs.CL,"We evaluate coding agent under a safety constraint, where each task pairs a manipulation goal with an obstacle the robot must not touch."
+cs.CL,"The agent pursues the goal but collides with the obstacle in most cases, treating task completion as its sole objective while neglecting safety."
+cs.CL,"By decomposing manipulation into a route phase and a contact-rich moment, we locate the source of the failure."
+cs.CL,"Along the route, the model cannot prioritize the safety constraint, having no notion of a clearing route and none of replanning once a chosen route becomes infeasible."
+cs.CL,"At the contact, it is unaware that contact execution is bounded by the same constraint."
+cs.CL,"To close this gap, we present SafeHarness, which equips the model with two obstacle-aware harnesses that enable it to prioritize the safety constraint."
+cs.CL,Obstacle-aware route planning grounds the objects as bounding boxes and draws candidate routes over them as sequences of waypoints.
+cs.CL,"The agent then plans a route in advance, verifies it, replans when necessary, and only then executes it."
+cs.CL,Obstacle-aware contact execution instead selects the contact position so that the contact itself avoids the obstacle.
+cs.CL,"SafeHarness attains 71.9% task success and 87.5% collision avoidance, surpassing the previous SOTA by 6.5% and 27.0%, respectively."
+cs.CL,"We study whether those embeddings reflect physical measurements of mass, distance, time and volume, which admit a unique, objective notion of semantic equivalence and distance."
+cs.CL,"We find that physical measurement is only weakly modeled in the embedding space, and that instead quite peculiar measurement patterns can be observed."
+cs.CL,"Further analysis indicates that embedding representations of physical measurements are strongly influenced by superficial string similarity, and recalibration of similarity does not substantially improve the alignment."
+cs.CL,"Hostile rhetoric toward social groups can normalize exclusion and justify mistreatment, as well as contribute to rising polarization and political violence."
+cs.CL,"Efforts to moderate hostile rhetoric in online speech draw on foundational theories in social and moral psychology, and political science."
+cs.CL,"However, these theories were developed largely in parallel, often propose different and sometimes conflicting accounts of how hostility develops, and have rarely been tested against each other in real discourse."
+cs.CL,"The result is a fragmented understanding of the rhetorical mechanisms of hostility, without a clear sense of how they appear, and relate to each other, in real-world discourse."
+cs.CL,"Coding harnesses shape how autonomous coding agents translate model capabilities into long-horizon software-engineering performance, yet existing work typically evaluates harnesses as monolithic systems, leaving the effectiveness of individual components unclear."
+cs.CL,"To enable component-level comparisons, we study this question with a lightweight coding harness whose execution loop is fixed while three components are varied: planning, action space, and context management."
+cs.CL,"Across four models evaluated on SWE-Bench Verified and Terminal-Bench 2.1, we evaluate 176 matched settings spanning five context-management strategies, four context-window budgets, and targeted ablations of planning and action space."
+cs.CL,These findings inform model- and budget-aware harness design and provide a modular framework for evaluating future harness components.
+cs.CL,"World modeling enables intelligence to anticipate consequences, guide interventions, and learn from interaction."
+cs.CL,"We introduce JEPA-Anything, a domain-agnostic framework based on orthogonal predictive factorization (OPF)."
+cs.CL,"Extending joint-embedding predictive architectures, OPF decomposes latent targets into complementary factors, learns them through dedicated pathways, and recombines them within a shared predictive design."
+cs.CL,"We evaluate JEPA-Anything across seven domains: vision, biology, clinical trajectories, control, molecular dynamics, physical fields, and weather."
+cs.CL,"Experiments span representation learning, intervention prediction, out-of-distribution generalization, and long-horizon dynamics, including 10 matched dynamics tasks, forecasting of over 1,000 clinical events, and 100-step molecular rollouts across four systems."
+cs.CL,"Against matched JEPA baselines, JEPA-Anything improves reported metrics on all 10 dynamics tasks and reduces single-intervention prediction error on Interventional Pong by 34.8%."
+cs.CL,It achieves the lowest one-step and 100-step molecular errors among compared methods in all four systems.
+cs.CL,"These results support a common factorized predictive principle across heterogeneous worlds, connecting world modeling with intervention and experimentally grounded scientific discovery."
+cs.CL,"This recipe, however, is undermined by two findings in agentic tasks: privileged information alone does not always make a teacher reliable, and the benefit of teacher supervision is stage-dependent."
+cs.CL,"We therefore propose RetireOPD (Self-Retiring On-Policy Distillation), which first optimizes a decoupled, skill-conditioned teacher with environment rewards and then trains a skill-free student jointly with RL and OPD."
+cs.CL,Safety evaluations for large language models rely on surface-form classifiers that report declining harm scores across model generations.
+cs.CL,We provide evidence that this methodology is systematically incomplete: explicit discriminatory content is transformed rather than removed.
+cs.CL,"The pattern is most visible at GPT-5: Topic~5 (1,997~documents) frames breast cancer as a men's rights debate, while zero equivalent clusters appear in women-directed output."
+cs.CL,Sentiment scores invert at GPT-4: early models demean women; later models over-correct.
+cs.CL,We formalise harm laundering as a three-criteria test and provide a three-stage detection protocol applicable to any generative model.
+cs.CL,"Within the OpenAI GPT lineage, toxicity score reduction is not a sufficient proxy for harm reduction."
+cs.CL,Adapting a pretrained autoregressive (AR) model is a cost-efficient route to a diffusion language model (DLM).
+cs.CL,"While nearly all such adaptations start from a full-attention transformer, AR modeling has shifted toward hybrid architectures that interleave attention and RNN layers."
+cs.CL,"This creates an obstacle for adaptation: unlike attention, RNNs are structurally causal and nontrivial to bidirectionalize."
+cs.CL,"Despite this mismatch, we investigate whether such backbones can become effective DLMs by adapting Qwen3.5 at 0.8B, 2B, 4B, and 9B scales, yielding the dQwen3.5 family."
+cs.CL,"We find that hybrid backbones can be efficient starting points for adaptation: against a full-attention control, the hybrid reaches a given training loss in about half the tokens."
+cs.CL,"Across scales, dQwen3.5 resembles full-attention DLMs in any-order decoding behavior and performs strongly under parallel decoding."
+cs.CL,"Yet full-attention decoding reads the growing history at every step, regardless of its benefit to the next prediction."
+cs.CL,"We show that a pretrained model's decoding states already contain information predictive of this benefit, before the global read."
+cs.CL,"ODA trains only the recall head, leaving pretrained weights unchanged and the complete historical KV cache available for future recall."
+cs.CL,"We further implement GPU-side conditional execution in vLLM, translating reduced global reads into practical decoding speedups over full attention at long context lengths."
+cs.CL,"Experiments across Qwen and Gemma models, including hybrid-attention backbones, show that selective recall recovers most of the performance lost under local attention while substantially reducing global reads."
+cs.CL,These findings support long-context inference in which pretrained models guide their own access to the information they retain.
+cs.CL,Agent trajectories record what an agent does and what happens next.
+cs.CL,"Yet standard supervised fine-tuning (SFT) applies loss only to agent-authored action tokens, using environment observations as context but not as prediction targets."
+cs.CL,We ask whether this convention provides the best initialization for subsequent reinforcement learning.
+cs.CL,"We introduce ActObs, which also supervises the observation tokens already present in each trajectory."
+cs.CL,"Although deployed agents never generate observations, learning to predict them encourages the policy to model action consequences without adding data, parameters, sequence tokens, or forward passes."
+cs.CL,The methods perform similarly after SFT but diverge after GRPO.
+cs.CL,"On Qwen3-4B, GRPO from ActObs achieves higher pass@k at every evaluated sampling budget than its action-only counterpart on Terminal-Bench 2.0."
+cs.CL,"The advantage extends to cross-domain code editing on aider-polyglot (+4.2 pp at pass@1 at 4B), whose tasks are unseen during SFT and RL."
+cs.CL,"ActObs retains more entropy during RL while requiring less policy movement, leaving the final policy closer to its SFT initialization."
+cs.CL,"Joint supervision prevents this one-sided specialization, preserving consequence prediction and preparing the policy for downstream exploration."
+cs.CL,Shown mode is the higher-load condition the doctrine is designed to measure.
+cs.CL,The claim is that LLMs fail along this axis in a specific direction.
+cs.CL,"Large language models are increasingly used in healthcare communication, yet most evaluations emphasize response quality while assuming that the user's concern has been interpreted correctly."
+cs.CL,"We introduce HerHealthEval, a controlled evaluation framework for multilingual understanding of women's-health communication."
+cs.CL,"For each clinical case, HerHealthEval provides matched versions in English, French, and Modern Standard Arabic using six communicative forms: canonical, clinical, layperson, indirect or hedged, emotionally concerned, and deliberately under-specified."
+cs.CL,"We evaluate a multilingual instruction model and QLoRA-adapted variants on concern classification, risk calibration, clarification behavior, parse compliance, and cross-form consistency."
+cs.CL,Results reveal that aggregate accuracy and consistency can conceal safety-relevant failures.
+cs.CL,A multilingual adaptation model reaches 0.994 under-triage in French and Arabic under language-asymmetric risk supervision.
+cs.CL,"A controlled re-adaptation using source-derived, language-invariant risk labels reduces under-triage to 0.572 and 0.558, respectively."
+cs.CL,"These findings show that robust multilingual healthcare evaluation requires explicit testing of register variation, uncertainty handling, and the provenance and invariance of adaptation labels."
+cs.CL,"Allen's interval algebra is a qualitative calculus for temporal relations, but its thirteen base relations are crisp predicates over exact interval boundaries."
+cs.CL,We develop the probabilistic Allen algebra (PAA): a generative and complete extension in which relation probabilities are derived from distributions over interval boundaries rather than assigned as scores.
+cs.CL,Time points are Gaussian; intervals have Gaussian midpoints and truncated-Gaussian durations.
+cs.CL,Each relation further decomposes into correlation-aware temporal primitives in the spirit of CIDOC CRM.
+cs.CL,"The algebra is scale-invariant and separates graded expressions such as ""shortly before"" from contact relations."
+cs.CL,"All results are Monte-Carlo validated and shipped as an open, tested Python package."
+cs.CL,Search advertising connects user intent with commercial content and plays a critical role in platform monetization.
+cs.CL,"Recent systems typically align pretrained generative models with a single business reward, such as eCPM, or use naive reward fusion for preliminary multi-objective alignment."
+cs.CL,"UniPolicy combines objective-specific prefix tokens, sparse MoE-LoRA routing, and objective-specific residual FFNs to hierarchically decouple parameters within a shared backbone, providing differentiated parameter and policy-expression spaces for different business objectives."
+cs.CL,"It further constructs pairwise preferences from multi-stage behavioral feedback, supplementing the relative preference information in exposed-but-unclicked samples and strengthening the relative advantage of clicked candidates in the generation distribution."
+cs.CL,"At inference, UniPolicy supports parallel, business-customizable multi-policy beam search, flexibly allocating candidate quotas across objectives under a fixed retrieval budget."
+cs.CL,"Large-scale offline experiments show that UniPolicy delivers balanced improvements across multiple metrics while preserving retrieval quality, outperforming single-objective reinforcement learning and naive reward-fusion baselines."
+cs.CL,"In a 7-day online A/B test on a real search advertising system, UniPolicy improves CTR by 0.71%, RPS by 1.58%, and advertising revenue by 1.32%, while maintaining stable serving latency."
+cs.CL,"Record-and-replay makes a run reproducible, but existing agent tooling records runs only to trace or score them, not to test a code change against them."
+cs.CL,"We present Chronicle, which records an agent run at its non-deterministic boundaries as immutable envelopes and replays it from the record."
+cs.CL,On-policy self-distillation (OPSD) lets a language model learn from a frozen copy of itself that sees an answer or a worked solution.
+cs.CL,"With a thinking-enabled teacher supervising direct-response rollouts, reference-free distillation accounts for much of Qwen3-1.7B's improvement under thinking-enabled evaluation, both in domain and on external benchmarks."
+cs.CL,"Evidence for an additional reference benefit is modest in Qwen, strongest for a polished solution, whereas complete traces add two percentage points in SmolLM3-3B at step 50."
+cs.CL,"At the same checkpoint, replacing short direct-response rollouts with long thinking-enabled rollouts turns gains into losses in both families while the problems, references, and evaluation stay fixed."
+cs.CL,Teacher profiles and matched loss interventions in Qwen further show that changing token-level supervision can leave student behavior largely unchanged.
+cs.CL,"Together, these findings suggest that OPSD can improve access to existing reasoning capabilities through parameters shared by direct-response and thinking-enabled inference."
+cs.CL,"The value of a privileged reference is what it adds to this cross-mode transfer, not how much of the solution it reveals."
+cs.CL,"Word-in-Context (WiC) remains challenging for language models, despite recent progress on lexical-semantic tasks."
+cs.CL,We evaluate open LLMs on WiC and traditional Word Sense Disambiguation (WSD) under similar settings.
+cs.CL,"We find that providing candidate senses, similar to what is done in traditional WSD, improves WiC performance in all settings."
+cs.CL,"In general, explicit sense information helps models make more consistent and targeted judgements."
+cs.CL,Human evaluation further shows that many apparent WiC errors reflect label ambiguity or mismatches between model and annotator sense boundaries rather than simple failures of lexical understanding.
+cs.CL,"In particular, results show that LLMs overthink the sense distinction often leading to errors based on overly fine-grained distinctions."
+cs.CL,"Large language models (LLMs) are increasingly considered for safety-critical engineering, yet their reliability in regulated functional-safety workflows remains underexplored."
+cs.CL,"We introduce SAFARI (Safety-Aware Functional Automotive Risk Inference), the first industrial benchmark for LLM-assisted automotive Hazard Analysis and Risk Assessment (HARA) under ISO 26262."
+cs.CL,"It contains 3,000 de-identified industrial HARA cases and evaluates two coupled tasks: open-ended hazard analysis and standards-grounded risk assessment."
+cs.CL,"To evaluate open-ended HARA artifacts, we propose the first reference-anchored LLM-as-a-judge protocol with high expert correlation."
+cs.CL,"Experiments with nine frontier LLMs show that models often produce plausible hazard narratives but remain weak at ISO 26262 risk classification, with the best ASIL macro-F1 reaching only 0.261."
+cs.CL,Chain-of-Thought prompting provides limited benefit and often degrades categorical risk assessment.
+cs.CL,"Error analysis further localizes major failures to scenario-critical context omissions during hazard generation and to controllability misjudgments during risk assessment, indicating where expert oversight should be concentrated."
+cs.CL,"Recent advancements in large language models have revolutionized the field of psychological counseling, especially in the context of Cognitive Behavioral Therapy (CBT)."
+cs.CL,We conduct extensive experiments to demonstrate the effectiveness of strategy-aligned generation and evaluate its efficacy in delivering professional and effective counseling with LLM-simulated clients to reflect real-world scenarios.
+cs.CL,"Full-consensus rates are often treated as indicators of collective cognition, yet depend on how participation and final states are operationalized."
+cs.CL,"Across human scoring definitions, estimates ranged from 24.0% to 57.0%; about one fifth of participants never posted, whereas agents almost always did."
+cs.CL,These complementary routes reduced different measurement asymmetries yet converged within 0.5 percentage points.
+cs.CL,"The gap persisted without early stopping and under a reparameterization removing the memorizable answer; reasoning-mode groups then agreed nearly unanimously, mostly on incorrect answers."
+cs.CL,"Simulated consensus did not track collective accuracy, and belief-anchored agent groups were biased estimators of the human group-outcome distribution in this setting."
+cs.CL,These analyses provide a scoring-explicit basis for assessing simulated-group estimates of human deliberative outcomes.
+cs.CL,"Large language models can report a numerical confidence together with generated content, but it is unclear whether this report is more than calibrated rhetoric."
+cs.CL,"Direct verbalization is a surprisingly strong baseline: after auditing benchmark errors, it reaches AUROC 0.956 and 0.937 for correctness prediction."
+cs.CL,"Four of nine errors from one model and two of eight from the other receive unanimous sample support, showing that self-consistency can amplify shared misconceptions."
+cs.CL,An exploratory audit of 100 confidence-tagged biography claims further finds only a modest confidence gap between supported and contradicted claims.
+cs.CL,"These results argue that useful self-reports remain sensitive to elicitation, correlated errors, and benchmark noise."
+cs.CL,"We present Relational BabyLM, a system submission to the BabyLM 2026 challenge that combines two cognitively motivated inductive biases in a single decoder-only Transformer."
+cs.CL,BabyLM's data-constrained training and comprehensive evaluation is an ideal testing ground for whether that data efficiency transfers.
+cs.CL,Architecture is the dominant factor for structural linguistic generalization; the objective is secondary but still significant.
+cs.CL,DAT's three relational attention types (full RA vs. the simpler RCA and DisRCA variants) are largely interchangeable at 10M words; full RA pulls ahead at 100M.
+cs.CL,"We also introduce a novel symbol-retrieval mechanism (RoPE-based, as opposed to learned, relative symbols) that matches learned symbol libraries while adding no parameters."
+cs.CL,"FarmerChat is Digital Green's AI-powered agricultural advisory assistant for smallholder farmers, who access it in their own language through text, voice, or photographs."
+cs.CL,"These conditions disproportionately affect crop, pest, chemical, and quantity terms that carry the meaning of a farmer's query."
+cs.CL,"We present a modular, model-agnostic pipeline for improving ASR quality in FarmerChat without fine-tuning or replacing the underlying ASR model."
+cs.CL,"The pipeline combines gated audio enhancement, speaker diarization and target-speaker selection, ASR, domain-aware correction using a weighted agricultural lexicon, and a quality gate for detecting unreliable transcripts."
+cs.CL,Only the diarization stage is fine-tuned; all other stages use off-the-shelf models behind common interfaces.
+cs.CL,"We evaluate the pipeline on human-annotated FarmerChat recordings in Hindi, Telugu, and Odia using word error rate (WER) and a domain-weighted error rate that gives greater importance to agricultural terminology."
+cs.CL,"The largest improvements occur on multi-speaker recordings, where target-speaker selection prevents competing speech from entering the transcript."
+cs.CL,"Across the full corpus, the pipeline reduces WER by 16-23% relative on three cloud ASR models and by 5% on an on-device model."
+cs.CL,"On multi-speaker recordings, the reductions are 32-42% for the cloud models and 16% for the on-device model."
+cs.CL,"These results show that targeted preprocessing, speaker selection, and domain-aware post-processing can substantially improve agricultural speech transcription while preserving the underlying ASR model."
+cs.CL,"Despite the widely recognized potential of AI in education, most prior work has focused on individualized student assistance."
+cs.CL,"In contrast, the majority of educational practice worldwide still takes place in collective classroom settings."
+cs.CL,"Among many other applications, Edustories enables evaluating LLMs' ability to predict the success of teacher interventions, crucial for providing practicing teachers with useful feedback."
+cs.CL,This gap highlights both the limitations and the emerging potential of AI as assistants for practicing teachers.
+cs.CL,"One proposed solution is alignment midtraining (AMT), which continues pretraining on large volumes of alignment-relevant documents to encourage generalisation in later stages of training."
+cs.CL,"Despite the prominence of AMT as an alignment approach, there is limited public evidence for its effectiveness."
+cs.CL,"To resolve this, we identify several assumptions around midtraining and evaluate them across scale: up to 110 billion-parameter models and 1 billion midtraining tokens."
+cs.CL,"For instance, we study a scenario where post-training data is ambiguous between two possible motivations."
+cs.CL,We find that midtraining can steer the model's motivation in simple versions of this setting.
+cs.CL,"However, the presence of a tiny fraction of finetuning data which suggests a competing motivation erases the effects of AMT."
+cs.CL,"We also study scenarios in which we want an AI to follow a number of rules, but only demonstrate a subset of them."
+cs.CL,We find that demonstrations must be present either in midtraining or post-training datasets for these rules to be robustly learned.
+cs.CL,"Large language models are usually interpreted through concepts that humans already possess: truthfulness, refusal, deception, personality, harmfulness, and related categories."
+cs.CL,This paper asks whether models may also represent and use distinctions for which no adequate human concept exists.
+cs.CL,"We call such internal structures xeno-representations, and their study xeno-interpretability."
+cs.CL,We distinguish the human-interpretable semantic space from the xeno-semantic space: the region of model-native representations for which no adequate human conceptual counterpart is available.
+cs.CL,We show that the space of possible internal distinctions in an LLM is substantially larger than the space available through finite human descriptions.
+cs.CL,"On this basis, we sketch an empirical programme to identify xeno-representations."
+cs.CL,"We finally examine the implications for AI safety and multi-agent systems, where model-native representations may propagate and stabilize across interacting agents while remaining only partially visible through human-readable communication."
+cs.CL,Semantic parsing (SP)-based knowledge base question answering aims to answer natural language questions by generating executable logical forms (LFs) over knowledge bases (KBs).
+cs.CL,"Recent LLM-based methods often make early discrete commitments to schema elements during intermediate reasoning, allowing incorrect intermediate schema decisions to propagate and finally result in incorrect LFs."
+cs.CL,"To overcome this limitation, we propose SALR, a schema-anchored latent reasoning method for LF construction."
+cs.CL,"It performs multi-step reasoning by generating continuous thoughts in the model's hidden states, thereby delaying the explicit commitment to LF decisions."
+cs.CL,It then incorporates the aligned schema codes into inputs for subsequent reasoning steps.
+cs.CL,This schema-mediated feedback guides LF generation without requiring the model to emit an explicit textual reasoning trajectory.
+cs.CL,Experiments on GrailQA and WebQSP show that SALR achieves consistent overall gains over strong baselines.
+cs.CL,"Notably, on compositional questions from GrailQA, SALR outperforms TIARA, a strong SP-based baseline, by 2.86 F1 points."
+cs.CL,Further analyses show that schema-mediated feedback affects LF generation and that schema information is recoverable from the latent states.
+cs.CL,"Speculative Decoding (SD) has significantly accelerated Large Language Model (LLM) inference, yet existing approaches face a fundamental tradeoff between two drafting strategies: neural drafting and context-based copying."
+cs.CL,"We introduce SwitchSD, an adaptive framework that treats copying as a latent control signal of the LLM."
+cs.CL,"This allows the system to dynamically switch between neural drafting (e.g., EAGLE) and context-based copying."
+cs.CL,Reasoning-based reranking with Large Language Models (LLMs) has shown promising improvements in text ranking.
+cs.CL,"However, current methods predominantly rely on a single reasoning trajectory, resulting in rankings that are susceptible to reasoning errors and inherently constrained in modeling the multifaceted signals underlying document relevance."
+cs.CL,"To resolve this dilemma, we propose MERIT-Rank(Multi-perspective Evidence and Reasoning Integration for Text Reranking), a framework that models complementary reasoning trajectories to improve reranking robustness."
+cs.CL,MERIT-Rank formulates a Multi-Trajectory Reasoning Space (MTRS) that evaluates query-document relevance from multiple perspectives and introduces a joint reranker that consolidates these reasoning paths into a unified ranking decision.
+cs.CL,"We further develop Progressive Rank Policy Optimization (PRPO), a progressive training framework that stabilizes reasoning trajectories while continually improving ranking quality through staged optimization objectives."
+cs.CL,Experiments on both reasoning-intensive and traditional retrieval benchmarks show that MERIT-Rank consistently achieves superior performance over competitive baselines.
+cs.CL,The 4B model notably outperforms most 7B and even 32B rerankers on BRIGHT.
+cs.CL,"We describe the architecture, training methodology and inference speedups of Granite 5.0 Turbo CTC, a 470 million parameter encoder-only model with an excellent speed-accuracy tradeoff."
+cs.CL,"The architecture uses pyramidal temporal subsampling within Conformer blocks using strided depthwise convolutions, block-diagonal (chunk-wise) self-attention, and conditioning on intermediate predictions from the middle layer."
+cs.CL,"Training highlights are the use of only publicly available data, the novel use of a Muon optimizer, and balanced data sampling."
+cs.CL,Inference speedups include replacing 1 x 1 convolutions with linear layers and optimizing the attention computation in the Conformer blocks.
+cs.CL,Tool learning enables large language models (LLMs) to use external tools for tasks beyond parametric knowledge.
+cs.CL,"To address these problems, we propose MATCH, a closed-loop framework for model-aware tool learning with curriculum scheduling and hierarchically gated rewards."
+cs.CL,"Hierarchical Tool-call Gated Reward (HTGR) scores tool name, argument key, and argument value as a gated chain, granting credit at each level only when prerequisites hold."
+cs.CL,"The same HTGR rewards drive both GRPO updates and MACL's difficulty refresh, closing the loop between policy optimization and sample scheduling."
+cs.CL,"On API-Bank and BFCL V3, MATCH reaches 72.19% and 62.87% overall accuracy, outperforming the main supervised and RL-based baselines."
+cs.CL,Backbone experiments further show consistent improvements across four backbones from two model families.
+cs.CL,"We propose a discriminative adaptation that reads the final prompt token's hidden state through a classification head, producing a label in one forward pass without modifying the backbone."
+cs.CL,"Because this readout starts from the hidden state the model would otherwise decode, it gives a controlled comparison of generative and discriminative inference in an otherwise identical speechLLM."
+cs.CL,"We keep the head a single linear layer, trading little accuracy for interpretability: each emotion becomes one direction in the LLM output token space, revealing associated tokens."
+cs.CL,"On IEMOCAP, across two speechLLM architectures, it improves Macro F1 and removes hallucinations, with largest gains on realistic ASR transcripts."
+cs.CL,Our analysis reveals that these emotion directions encode indirect associations mirroring biases in web-scale text.
+cs.CL,"This paper builds a theoretical bridge between the economic notion of marginal utility and two machine-learning constructs, matrix factorization and the Key--Value cache of transformer language models."
+cs.CL,The three collapse into a single allocation rule: retain the top dimensions whose eigenvalue exceeds the shadow price of the binding constraint.
+cs.CL,"The full-scale extraction benchmark, including LoRA fine-tuning, is reported as projected rather than measured and remains an empirical extension of this work."
+cs.CL,"AI systems can strengthen democracy by supporting deliberation at scale by addressing cognitive, social, platform-design, and market-driven frictions, while preserving human agency."
+cs.CL,"We also address critical challenges, including alignment, sycophancy, training bias, and over-reliance on AI systems."
+cs.CL,"We call on the machine learning community to develop deliberation-focused AI systems evaluated not on engagement metrics but on their capacity to facilitate informed, representative, and friction-robust discourse."
+cs.CL,A coding agent halfway through an issue has already read much of what a retriever ranks highest.
+cs.CL,"Relevance is scored per passage, but sufficiency belongs to the set: a ranker can fill its budget with variants of one required fact and leave the decision unsupported."
+cs.CL,"We formulate state-conditioned minimal sufficient evidence recovery: given a captured agent state, recover a compact evidence combination that supplies the support its next decision still lacks."
+cs.CL,"Three semantic calls propose a jointly sufficient set, search for what it lacks, and return 4-8 intact source units within 6,144 tokens."
+cs.CL,"A matched control ranking by similarity alone reaches 66.6%, placing the gain in the set-level policy, not the computation."
+cs.CL,"From frozen repository source with no gold-derived pool, the lead is 5.0 points."
+cs.CL,"On AMA-Bench it answers from a 76.2% smaller answer prompt, with accuracy 2.08 points above that benchmark's own memory agent."
+cs.CL,Removing one required group from an otherwise complete set costs 12.3 and 11.1 points of repair-localization precision under two executors.
+cs.CL,Retrieval for agents is better posed as recovering what a decision lacks than re-ranking what an issue resembles.
