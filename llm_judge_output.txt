@@ -1,0 +1,67 @@
+judging 303 pairs from 60 sentences
+
+loading Qwen/Qwen2.5-0.5B-Instruct ...
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:   0%|          | 1/290 [00:03<15:30,  3.22s/it]Loading weights:  30%|███       | 87/290 [00:03<00:05, 35.35it/s]Loading weights:  39%|███▉      | 113/290 [00:03<00:04, 39.60it/s]Loading weights:  45%|████▍     | 130/290 [00:04<00:03, 45.25it/s]Loading weights:  50%|████▉     | 144/290 [00:04<00:02, 49.49it/s]Loading weights:  54%|█████▍    | 156/290 [00:04<00:02, 54.33it/s]Loading weights:  58%|█████▊    | 167/290 [00:04<00:02, 56.09it/s]Loading weights:  61%|██████    | 177/290 [00:04<00:01, 56.52it/s]Loading weights:  64%|██████▍   | 186/290 [00:04<00:01, 60.68it/s]Loading weights:  68%|██████▊   | 196/290 [00:04<00:01, 65.69it/s]Loading weights:  71%|███████▏  | 207/290 [00:05<00:01, 65.07it/s]Loading weights:  76%|███████▌  | 219/290 [00:05<00:01, 63.70it/s]Loading weights:  80%|███████▉  | 231/290 [00:05<00:00, 65.82it/s]Loading weights:  84%|████████▍ | 243/290 [00:05<00:00, 67.92it/s]Loading weights:  88%|████████▊ | 255/290 [00:05<00:00, 69.85it/s]Loading weights:  92%|█████████▏| 267/290 [00:05<00:00, 72.22it/s]Loading weights:  95%|█████████▍| 275/290 [00:06<00:00, 67.93it/s]Loading weights:  97%|█████████▋| 282/290 [00:06<00:00, 55.34it/s]Loading weights: 100%|██████████| 290/290 [00:06<00:00, 45.83it/s]
+loaded
+
+yes [7414, 9454, 9693, 9834]  no [902, 2152, 2308, 2753]
+
+  8/303 (0.6/s, 456s left)
+  16/303 (0.7/s, 422s left)
+  24/303 (0.6/s, 439s left)
+  32/303 (0.6/s, 442s left)
+  40/303 (0.6/s, 430s left)
+  48/303 (0.6/s, 421s left)
+  56/303 (0.6/s, 414s left)
+  64/303 (0.6/s, 393s left)
+  72/303 (0.6/s, 374s left)
+  80/303 (0.6/s, 372s left)
+  88/303 (0.6/s, 358s left)
+  96/303 (0.6/s, 346s left)
+  104/303 (0.6/s, 333s left)
+  112/303 (0.6/s, 313s left)
+  120/303 (0.6/s, 299s left)
+  128/303 (0.6/s, 287s left)
+  136/303 (0.6/s, 268s left)
+  144/303 (0.6/s, 256s left)
+  152/303 (0.6/s, 244s left)
+  160/303 (0.6/s, 229s left)
+  168/303 (0.6/s, 215s left)
+  176/303 (0.6/s, 203s left)
+  184/303 (0.6/s, 190s left)
+  192/303 (0.6/s, 178s left)
+  200/303 (0.6/s, 165s left)
+  208/303 (0.6/s, 153s left)
+  216/303 (0.6/s, 139s left)
+  224/303 (0.6/s, 126s left)
+  232/303 (0.6/s, 113s left)
+  240/303 (0.6/s, 101s left)
+  248/303 (0.6/s, 88s left)
+  256/303 (0.6/s, 76s left)
+  264/303 (0.6/s, 63s left)
+  272/303 (0.6/s, 50s left)
+  280/303 (0.6/s, 37s left)
+  288/303 (0.6/s, 24s left)
+  296/303 (0.6/s, 11s left)
+  303/303 (0.6/s, 0s left)
+
+total 489s
+
+sev perturbation     n   BERTScore   LLM judge
+----------------------------------------------
+  0 identical       60      1.0000      0.9884
+  1 synonym         60      0.9277      0.9450
+  2 scramble        60      0.2959      0.9339
+  3 number_swap      8      0.9671      0.5028
+  4 antonym         55      0.9151      0.6093
+  5 negation        60      0.8758      0.3371
+
+Spearman with severity (more negative is better):
+  BERTScore -0.5021
+  LLM judge -0.7699
+
+antonym at or above its synonym counterpart (55 pairs):
+  BERTScore 26/55 (47.3%)
+  LLM judge 7/55 (12.7%)
+
+wrote results_llm_judge.csv and data/perturbation_judged.csv
