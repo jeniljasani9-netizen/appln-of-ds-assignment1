@@ -16,8 +16,8 @@ Reference implementation: https://github.com/Tiiiger/bert_score
 | WMT18 replication | BERTScore beats BLEU in all 7 to-English pairs. Overall Kendall tau 0.369 vs 0.238 |
 | vs. published figures | Mean advantage over BLEU is +0.131 in this run and +0.131 in the paper |
 | SummEval extension | Tracks relevance (r = 0.358) far better than factual consistency (r = 0.150) |
-| Perturbation corpus | An antonym swap outscores its synonym counterpart 47% of the time |
-| LLM-as-judge | A 0.5B judge reduces that to 13%, but scores scrambled word salad at 0.93 |
+| Perturbation corpus | An antonym swap outscores its synonym counterpart 42% of the time (78/184) |
+| LLM-as-judge | On a matched subset, 47% for BERTScore against 13% for a 0.5B judge, which scores scrambled word salad at 0.93 |
 
 The two metrics fail in complementary ways: BERTScore is surface-sensitive
 and meaning-blind, the LLM judge is the reverse.
